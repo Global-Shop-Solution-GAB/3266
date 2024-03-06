@@ -1,0 +1,1183 @@
+Program.Sub.ScreenSU.Start
+
+Gui.SS_Form1..Create
+Gui.SS_Form1..Caption("Earnings History")
+Gui.SS_Form1..Size(6160,7380)
+Gui.SS_Form1..Position(0,0)
+Gui.SS_Form1..AlwaysOnTop(False)
+Gui.SS_Form1..FontName("Arial")
+Gui.SS_Form1..FontSize(8)
+Gui.SS_Form1..ForeColor(0)
+Gui.SS_Form1..Backcolor(-2147483633)
+Gui.SS_Form1..ControlBox(True)
+Gui.SS_Form1..MaxButton(False)
+Gui.SS_Form1..MinButton(False)
+Gui.SS_Form1..MousePointer(0)
+Gui.SS_Form1..Moveable(True)
+Gui.SS_Form1..Sizeable(False)
+Gui.SS_Form1..ShowInTaskBar(True)
+Gui.SS_Form1..TitleBar(True)
+
+Gui.SS_Form1..Event(unload,ss_form1_unload)
+
+Gui.SS_Form1.lbl_dtp1_BegDate.Create(label)
+Gui.SS_Form1.lbl_dtp1_BegDate.Caption("Beginning Date")
+Gui.SS_Form1.lbl_dtp1_BegDate.Visible(True)
+Gui.SS_Form1.lbl_dtp1_BegDate.Size(1800,200)
+Gui.SS_Form1.lbl_dtp1_BegDate.Zorder(1)
+Gui.SS_Form1.lbl_dtp1_BegDate.Position(100,135)
+Gui.SS_Form1.lbl_dtp1_BegDate.Enabled(True)
+Gui.SS_Form1.lbl_dtp1_BegDate.Alignment(0)
+Gui.SS_Form1.lbl_dtp1_BegDate.FontName("Arial")
+Gui.SS_Form1.lbl_dtp1_BegDate.FontSize(8)
+Gui.SS_Form1.lbl_dtp1_BegDate.Backcolor(-2147483633)
+Gui.SS_Form1.lbl_dtp1_BegDate.BackStyle(0)
+Gui.SS_Form1.lbl_dtp1_BegDate.Tooltip("")
+Gui.SS_Form1.lbl_dtp1_BegDate.ControlGroup(0)
+
+
+Gui.SS_Form1.dtp1_BegDate.Create(datepicker)
+Gui.SS_Form1.dtp1_BegDate.Visible(True)
+Gui.SS_Form1.dtp1_BegDate.Size(1800,345)
+Gui.SS_Form1.dtp1_BegDate.Zorder(0)
+Gui.SS_Form1.dtp1_BegDate.Position(100,335)
+Gui.SS_Form1.dtp1_BegDate.Enabled(True)
+Gui.SS_Form1.dtp1_BegDate.Checkbox(False)
+Gui.SS_Form1.dtp1_BegDate.TabStop(True)
+Gui.SS_Form1.dtp1_BegDate.TabIndex(1)
+Gui.SS_Form1.dtp1_BegDate.Tooltip("")
+Gui.SS_Form1.dtp1_BegDate.ControlGroup(0)
+Gui.SS_Form1.dtp1_BegDate.DefaultValue("")
+
+
+Gui.SS_Form1.lbl_dtp2_EndDate.Create(label)
+Gui.SS_Form1.lbl_dtp2_EndDate.Caption("Ending Date")
+Gui.SS_Form1.lbl_dtp2_EndDate.Visible(True)
+Gui.SS_Form1.lbl_dtp2_EndDate.Size(1800,200)
+Gui.SS_Form1.lbl_dtp2_EndDate.Zorder(1)
+Gui.SS_Form1.lbl_dtp2_EndDate.Position(1985,135)
+Gui.SS_Form1.lbl_dtp2_EndDate.Enabled(True)
+Gui.SS_Form1.lbl_dtp2_EndDate.Alignment(0)
+Gui.SS_Form1.lbl_dtp2_EndDate.FontName("Arial")
+Gui.SS_Form1.lbl_dtp2_EndDate.FontSize(8)
+Gui.SS_Form1.lbl_dtp2_EndDate.Backcolor(-2147483633)
+Gui.SS_Form1.lbl_dtp2_EndDate.BackStyle(0)
+Gui.SS_Form1.lbl_dtp2_EndDate.Tooltip("")
+Gui.SS_Form1.lbl_dtp2_EndDate.ControlGroup(0)
+
+
+Gui.SS_Form1.dtp2_EndDate.Create(datepicker)
+Gui.SS_Form1.dtp2_EndDate.Visible(True)
+Gui.SS_Form1.dtp2_EndDate.Size(1800,345)
+Gui.SS_Form1.dtp2_EndDate.Zorder(0)
+Gui.SS_Form1.dtp2_EndDate.Position(1985,335)
+Gui.SS_Form1.dtp2_EndDate.Enabled(True)
+Gui.SS_Form1.dtp2_EndDate.Checkbox(False)
+Gui.SS_Form1.dtp2_EndDate.TabStop(True)
+Gui.SS_Form1.dtp2_EndDate.TabIndex(2)
+Gui.SS_Form1.dtp2_EndDate.Tooltip("")
+Gui.SS_Form1.dtp2_EndDate.ControlGroup(0)
+Gui.SS_Form1.dtp2_EndDate.DefaultValue("")
+
+
+Gui.SS_Form1.chk1_AllDates.Create(checkbox)
+Gui.SS_Form1.chk1_AllDates.Alignment(0)
+Gui.SS_Form1.chk1_AllDates.Caption("All Dates")
+Gui.SS_Form1.chk1_AllDates.Visible(True)
+Gui.SS_Form1.chk1_AllDates.Size(1800,300)
+Gui.SS_Form1.chk1_AllDates.Zorder(0)
+Gui.SS_Form1.chk1_AllDates.Position(100,685)
+Gui.SS_Form1.chk1_AllDates.Enabled(True)
+Gui.SS_Form1.chk1_AllDates.FontName("Arial")
+Gui.SS_Form1.chk1_AllDates.FontSize(8)
+Gui.SS_Form1.chk1_AllDates.SetInternationalID(19700)
+Gui.SS_Form1.chk1_AllDates.TabStop(True)
+Gui.SS_Form1.chk1_AllDates.TabIndex(3)
+Gui.SS_Form1.chk1_AllDates.Tooltip("")
+Gui.SS_Form1.chk1_AllDates.ControlGroup(0)
+Gui.SS_Form1.chk1_AllDates.DefaultValue("")
+
+Gui.SS_Form1.chk1_AllDates.Event(click,chk1_alldates_click)
+
+Gui.SS_Form1.lbl_txt1_BegEmpl.Create(label)
+Gui.SS_Form1.lbl_txt1_BegEmpl.Caption("Beginning Employee")
+Gui.SS_Form1.lbl_txt1_BegEmpl.Visible(True)
+Gui.SS_Form1.lbl_txt1_BegEmpl.Size(1800,200)
+Gui.SS_Form1.lbl_txt1_BegEmpl.Zorder(1)
+Gui.SS_Form1.lbl_txt1_BegEmpl.Position(100,1235)
+Gui.SS_Form1.lbl_txt1_BegEmpl.Enabled(True)
+Gui.SS_Form1.lbl_txt1_BegEmpl.Alignment(0)
+Gui.SS_Form1.lbl_txt1_BegEmpl.FontName("Arial")
+Gui.SS_Form1.lbl_txt1_BegEmpl.FontSize(8)
+Gui.SS_Form1.lbl_txt1_BegEmpl.Backcolor(-2147483633)
+Gui.SS_Form1.lbl_txt1_BegEmpl.BackStyle(0)
+Gui.SS_Form1.lbl_txt1_BegEmpl.SetInternationalID(61500)
+Gui.SS_Form1.lbl_txt1_BegEmpl.Tooltip("")
+Gui.SS_Form1.lbl_txt1_BegEmpl.ControlGroup(0)
+
+
+Gui.SS_Form1.txt1_BegEmpl.Create(textbox)
+Gui.SS_Form1.txt1_BegEmpl.Text("")
+Gui.SS_Form1.txt1_BegEmpl.Visible(True)
+Gui.SS_Form1.txt1_BegEmpl.Size(1800,330)
+Gui.SS_Form1.txt1_BegEmpl.Zorder(1)
+Gui.SS_Form1.txt1_BegEmpl.Position(100,1435)
+Gui.SS_Form1.txt1_BegEmpl.Enabled(True)
+Gui.SS_Form1.txt1_BegEmpl.Alignment(0)
+Gui.SS_Form1.txt1_BegEmpl.FontName("Arial")
+Gui.SS_Form1.txt1_BegEmpl.FontSize(8)
+Gui.SS_Form1.txt1_BegEmpl.Backcolor(16777215)
+Gui.SS_Form1.txt1_BegEmpl.BorderStyle(1)
+Gui.SS_Form1.txt1_BegEmpl.TabStop(True)
+Gui.SS_Form1.txt1_BegEmpl.TabIndex(4)
+Gui.SS_Form1.txt1_BegEmpl.Tooltip("")
+Gui.SS_Form1.txt1_BegEmpl.ControlGroup(0)
+Gui.SS_Form1.txt1_BegEmpl.DefaultValue("")
+
+
+Gui.SS_Form1.cmd_txt1_BegEmpl.Create(button)
+Gui.SS_Form1.cmd_txt1_BegEmpl.Caption("^")
+Gui.SS_Form1.cmd_txt1_BegEmpl.Visible(True)
+Gui.SS_Form1.cmd_txt1_BegEmpl.Size(330,330)
+Gui.SS_Form1.cmd_txt1_BegEmpl.Zorder(0)
+Gui.SS_Form1.cmd_txt1_BegEmpl.Position(1985,1435)
+Gui.SS_Form1.cmd_txt1_BegEmpl.Enabled(True)
+Gui.SS_Form1.cmd_txt1_BegEmpl.FontName("Arial")
+Gui.SS_Form1.cmd_txt1_BegEmpl.FontSize(8)
+Gui.SS_Form1.cmd_txt1_BegEmpl.TabStop(True)
+Gui.SS_Form1.cmd_txt1_BegEmpl.TabIndex(5)
+Gui.SS_Form1.cmd_txt1_BegEmpl.Tooltip("")
+Gui.SS_Form1.cmd_txt1_BegEmpl.ControlGroup(0)
+Gui.SS_Form1.cmd_txt1_BegEmpl.DefaultValue("")
+
+Gui.SS_Form1.cmd_txt1_BegEmpl.Event(click,cmd_txt1_begempl_click)
+
+Gui.SS_Form1.lbl_txt2_EndEmpl.Create(label)
+Gui.SS_Form1.lbl_txt2_EndEmpl.Caption("Ending Employee")
+Gui.SS_Form1.lbl_txt2_EndEmpl.Visible(True)
+Gui.SS_Form1.lbl_txt2_EndEmpl.Size(1800,200)
+Gui.SS_Form1.lbl_txt2_EndEmpl.Zorder(1)
+Gui.SS_Form1.lbl_txt2_EndEmpl.Position(2455,1235)
+Gui.SS_Form1.lbl_txt2_EndEmpl.Enabled(True)
+Gui.SS_Form1.lbl_txt2_EndEmpl.Alignment(0)
+Gui.SS_Form1.lbl_txt2_EndEmpl.FontName("Arial")
+Gui.SS_Form1.lbl_txt2_EndEmpl.FontSize(8)
+Gui.SS_Form1.lbl_txt2_EndEmpl.Backcolor(-2147483633)
+Gui.SS_Form1.lbl_txt2_EndEmpl.BackStyle(0)
+Gui.SS_Form1.lbl_txt2_EndEmpl.SetInternationalID(213400)
+Gui.SS_Form1.lbl_txt2_EndEmpl.Tooltip("")
+Gui.SS_Form1.lbl_txt2_EndEmpl.ControlGroup(0)
+
+
+Gui.SS_Form1.txt2_EndEmpl.Create(textbox)
+Gui.SS_Form1.txt2_EndEmpl.Text("")
+Gui.SS_Form1.txt2_EndEmpl.Visible(True)
+Gui.SS_Form1.txt2_EndEmpl.Size(1800,330)
+Gui.SS_Form1.txt2_EndEmpl.Zorder(1)
+Gui.SS_Form1.txt2_EndEmpl.Position(2455,1435)
+Gui.SS_Form1.txt2_EndEmpl.Enabled(True)
+Gui.SS_Form1.txt2_EndEmpl.Alignment(0)
+Gui.SS_Form1.txt2_EndEmpl.FontName("Arial")
+Gui.SS_Form1.txt2_EndEmpl.FontSize(8)
+Gui.SS_Form1.txt2_EndEmpl.Backcolor(16777215)
+Gui.SS_Form1.txt2_EndEmpl.BorderStyle(1)
+Gui.SS_Form1.txt2_EndEmpl.TabStop(True)
+Gui.SS_Form1.txt2_EndEmpl.TabIndex(6)
+Gui.SS_Form1.txt2_EndEmpl.Tooltip("")
+Gui.SS_Form1.txt2_EndEmpl.ControlGroup(0)
+Gui.SS_Form1.txt2_EndEmpl.DefaultValue("")
+
+
+Gui.SS_Form1.cmd_txt2_EndEmpl.Create(button)
+Gui.SS_Form1.cmd_txt2_EndEmpl.Caption("^")
+Gui.SS_Form1.cmd_txt2_EndEmpl.Visible(True)
+Gui.SS_Form1.cmd_txt2_EndEmpl.Size(330,330)
+Gui.SS_Form1.cmd_txt2_EndEmpl.Zorder(0)
+Gui.SS_Form1.cmd_txt2_EndEmpl.Position(4340,1435)
+Gui.SS_Form1.cmd_txt2_EndEmpl.Enabled(True)
+Gui.SS_Form1.cmd_txt2_EndEmpl.FontName("Arial")
+Gui.SS_Form1.cmd_txt2_EndEmpl.FontSize(8)
+Gui.SS_Form1.cmd_txt2_EndEmpl.TabStop(True)
+Gui.SS_Form1.cmd_txt2_EndEmpl.TabIndex(7)
+Gui.SS_Form1.cmd_txt2_EndEmpl.Tooltip("")
+Gui.SS_Form1.cmd_txt2_EndEmpl.ControlGroup(0)
+Gui.SS_Form1.cmd_txt2_EndEmpl.DefaultValue("")
+
+Gui.SS_Form1.cmd_txt2_EndEmpl.Event(click,cmd_txt2_endempl_click)
+
+Gui.SS_Form1.chk2_AllEmpl.Create(checkbox)
+Gui.SS_Form1.chk2_AllEmpl.Alignment(0)
+Gui.SS_Form1.chk2_AllEmpl.Caption("All Employees")
+Gui.SS_Form1.chk2_AllEmpl.Visible(True)
+Gui.SS_Form1.chk2_AllEmpl.Size(1800,300)
+Gui.SS_Form1.chk2_AllEmpl.Zorder(0)
+Gui.SS_Form1.chk2_AllEmpl.Position(100,1770)
+Gui.SS_Form1.chk2_AllEmpl.Enabled(True)
+Gui.SS_Form1.chk2_AllEmpl.FontName("Arial")
+Gui.SS_Form1.chk2_AllEmpl.FontSize(8)
+Gui.SS_Form1.chk2_AllEmpl.SetInternationalID(20100)
+Gui.SS_Form1.chk2_AllEmpl.TabStop(True)
+Gui.SS_Form1.chk2_AllEmpl.TabIndex(9)
+Gui.SS_Form1.chk2_AllEmpl.Tooltip("")
+Gui.SS_Form1.chk2_AllEmpl.ControlGroup(0)
+Gui.SS_Form1.chk2_AllEmpl.DefaultValue("")
+
+Gui.SS_Form1.chk2_AllEmpl.Event(click,chk2_allempl_click)
+
+Gui.SS_Form1.lvw1_Empl.Create(listview)
+Gui.SS_Form1.lvw1_Empl.Visible(True)
+Gui.SS_Form1.lvw1_Empl.Size(5810,2000)
+Gui.SS_Form1.lvw1_Empl.Zorder(0)
+Gui.SS_Form1.lvw1_Empl.Position(100,2320)
+Gui.SS_Form1.lvw1_Empl.Enabled(True)
+Gui.SS_Form1.lvw1_Empl.BorderStyle(1)
+Gui.SS_Form1.lvw1_Empl.FontName("Arial")
+Gui.SS_Form1.lvw1_Empl.FontSize(8)
+Gui.SS_Form1.lvw1_Empl.TabStop(True)
+Gui.SS_Form1.lvw1_Empl.TabIndex(10)
+Gui.SS_Form1.lvw1_Empl.Tooltip("")
+Gui.SS_Form1.lvw1_Empl.View(3)
+Gui.SS_Form1.lvw1_Empl.AddListViewColumn("variable.Translation.61500",2705,0)
+Gui.SS_Form1.lvw1_Empl.AddListViewColumn("variable.Translation.213400",2705,0)
+
+
+Gui.SS_Form1.cmd_lvw1_EmplAdd.Create(button)
+Gui.SS_Form1.cmd_lvw1_EmplAdd.Caption("Add")
+Gui.SS_Form1.cmd_lvw1_EmplAdd.Visible(True)
+Gui.SS_Form1.cmd_lvw1_EmplAdd.Size(1000,330)
+Gui.SS_Form1.cmd_lvw1_EmplAdd.Zorder(0)
+Gui.SS_Form1.cmd_lvw1_EmplAdd.Position(4810,1435)
+Gui.SS_Form1.cmd_lvw1_EmplAdd.Enabled(True)
+Gui.SS_Form1.cmd_lvw1_EmplAdd.FontName("Arial")
+Gui.SS_Form1.cmd_lvw1_EmplAdd.FontSize(8)
+Gui.SS_Form1.cmd_lvw1_EmplAdd.SetInternationalID(7600)
+Gui.SS_Form1.cmd_lvw1_EmplAdd.TabStop(True)
+Gui.SS_Form1.cmd_lvw1_EmplAdd.TabIndex(8)
+Gui.SS_Form1.cmd_lvw1_EmplAdd.Tooltip("")
+Gui.SS_Form1.cmd_lvw1_EmplAdd.ControlGroup(0)
+Gui.SS_Form1.cmd_lvw1_EmplAdd.DefaultValue("")
+
+Gui.SS_Form1.cmd_lvw1_EmplAdd.Event(click,cmd_lvw1add_click)
+
+Gui.SS_Form1.cmd_lvw1_EmplDelete.Create(button)
+Gui.SS_Form1.cmd_lvw1_EmplDelete.Caption("Delete")
+Gui.SS_Form1.cmd_lvw1_EmplDelete.Visible(True)
+Gui.SS_Form1.cmd_lvw1_EmplDelete.Size(1000,330)
+Gui.SS_Form1.cmd_lvw1_EmplDelete.Zorder(0)
+Gui.SS_Form1.cmd_lvw1_EmplDelete.Position(100,4405)
+Gui.SS_Form1.cmd_lvw1_EmplDelete.Enabled(True)
+Gui.SS_Form1.cmd_lvw1_EmplDelete.FontName("Arial")
+Gui.SS_Form1.cmd_lvw1_EmplDelete.FontSize(8)
+Gui.SS_Form1.cmd_lvw1_EmplDelete.SetInternationalID(171500)
+Gui.SS_Form1.cmd_lvw1_EmplDelete.TabStop(True)
+Gui.SS_Form1.cmd_lvw1_EmplDelete.TabIndex(14)
+Gui.SS_Form1.cmd_lvw1_EmplDelete.Tooltip("")
+Gui.SS_Form1.cmd_lvw1_EmplDelete.ControlGroup(0)
+Gui.SS_Form1.cmd_lvw1_EmplDelete.DefaultValue("")
+
+Gui.SS_Form1.cmd_lvw1_EmplDelete.Event(click,cmd_lvw1delete_click)
+
+Gui.SS_Form1.cmd_lvw1_EmplClear.Create(button)
+Gui.SS_Form1.cmd_lvw1_EmplClear.Caption("Clear")
+Gui.SS_Form1.cmd_lvw1_EmplClear.Visible(True)
+Gui.SS_Form1.cmd_lvw1_EmplClear.Size(1000,330)
+Gui.SS_Form1.cmd_lvw1_EmplClear.Zorder(0)
+Gui.SS_Form1.cmd_lvw1_EmplClear.Position(1185,4405)
+Gui.SS_Form1.cmd_lvw1_EmplClear.Enabled(True)
+Gui.SS_Form1.cmd_lvw1_EmplClear.FontName("Arial")
+Gui.SS_Form1.cmd_lvw1_EmplClear.FontSize(8)
+Gui.SS_Form1.cmd_lvw1_EmplClear.SetInternationalID(106700)
+Gui.SS_Form1.cmd_lvw1_EmplClear.TabStop(True)
+Gui.SS_Form1.cmd_lvw1_EmplClear.TabIndex(15)
+Gui.SS_Form1.cmd_lvw1_EmplClear.Tooltip("")
+Gui.SS_Form1.cmd_lvw1_EmplClear.ControlGroup(0)
+Gui.SS_Form1.cmd_lvw1_EmplClear.DefaultValue("")
+
+Gui.SS_Form1.cmd_lvw1_EmplClear.Event(click,cmd_lvw1clear_click)
+
+Gui.SS_Form1.lbl_ddl1Beg.Create(label)
+Gui.SS_Form1.lbl_ddl1Beg.Caption("Beginning Earnings Code")
+Gui.SS_Form1.lbl_ddl1Beg.Visible(True)
+Gui.SS_Form1.lbl_ddl1Beg.Size(1800,200)
+Gui.SS_Form1.lbl_ddl1Beg.Zorder(1)
+Gui.SS_Form1.lbl_ddl1Beg.Position(100,4935)
+Gui.SS_Form1.lbl_ddl1Beg.Enabled(True)
+Gui.SS_Form1.lbl_ddl1Beg.Alignment(0)
+Gui.SS_Form1.lbl_ddl1Beg.FontName("Arial")
+Gui.SS_Form1.lbl_ddl1Beg.FontSize(8)
+Gui.SS_Form1.lbl_ddl1Beg.Backcolor(-2147483633)
+Gui.SS_Form1.lbl_ddl1Beg.BackStyle(0)
+Gui.SS_Form1.lbl_ddl1Beg.Tooltip("")
+Gui.SS_Form1.lbl_ddl1Beg.ControlGroup(0)
+
+
+Gui.SS_Form1.ddl1Beg.Create(dropdownlist)
+Gui.SS_Form1.ddl1Beg.Visible(True)
+Gui.SS_Form1.ddl1Beg.Size(1800,330)
+Gui.SS_Form1.ddl1Beg.Zorder(0)
+Gui.SS_Form1.ddl1Beg.Position(100,5135)
+Gui.SS_Form1.ddl1Beg.Enabled(True)
+Gui.SS_Form1.ddl1Beg.FontName("Arial")
+Gui.SS_Form1.ddl1Beg.FontSize(8)
+Gui.SS_Form1.ddl1Beg.TabStop(True)
+Gui.SS_Form1.ddl1Beg.TabIndex(11)
+Gui.SS_Form1.ddl1Beg.Tooltip("")
+Gui.SS_Form1.ddl1Beg.ControlGroup(0)
+Gui.SS_Form1.ddl1Beg.DefaultValue("")
+
+
+Gui.SS_Form1.lbl_ddl1End.Create(label)
+Gui.SS_Form1.lbl_ddl1End.Caption("Ending Earnings Code")
+Gui.SS_Form1.lbl_ddl1End.Visible(True)
+Gui.SS_Form1.lbl_ddl1End.Size(1800,200)
+Gui.SS_Form1.lbl_ddl1End.Zorder(1)
+Gui.SS_Form1.lbl_ddl1End.Position(1985,4935)
+Gui.SS_Form1.lbl_ddl1End.Enabled(True)
+Gui.SS_Form1.lbl_ddl1End.Alignment(0)
+Gui.SS_Form1.lbl_ddl1End.FontName("Arial")
+Gui.SS_Form1.lbl_ddl1End.FontSize(8)
+Gui.SS_Form1.lbl_ddl1End.Backcolor(-2147483633)
+Gui.SS_Form1.lbl_ddl1End.BackStyle(0)
+Gui.SS_Form1.lbl_ddl1End.Tooltip("")
+Gui.SS_Form1.lbl_ddl1End.ControlGroup(0)
+
+
+Gui.SS_Form1.ddl1End.Create(dropdownlist)
+Gui.SS_Form1.ddl1End.Visible(True)
+Gui.SS_Form1.ddl1End.Size(1800,330)
+Gui.SS_Form1.ddl1End.Zorder(0)
+Gui.SS_Form1.ddl1End.Position(1985,5135)
+Gui.SS_Form1.ddl1End.Enabled(True)
+Gui.SS_Form1.ddl1End.FontName("Arial")
+Gui.SS_Form1.ddl1End.FontSize(8)
+Gui.SS_Form1.ddl1End.TabStop(True)
+Gui.SS_Form1.ddl1End.TabIndex(12)
+Gui.SS_Form1.ddl1End.Tooltip("")
+Gui.SS_Form1.ddl1End.ControlGroup(0)
+Gui.SS_Form1.ddl1End.DefaultValue("")
+
+
+Gui.SS_Form1.chk1AllECodes.Create(checkbox)
+Gui.SS_Form1.chk1AllECodes.Alignment(0)
+Gui.SS_Form1.chk1AllECodes.Caption("All Earnings Code")
+Gui.SS_Form1.chk1AllECodes.Visible(True)
+Gui.SS_Form1.chk1AllECodes.Size(1800,300)
+Gui.SS_Form1.chk1AllECodes.Zorder(0)
+Gui.SS_Form1.chk1AllECodes.Position(100,5470)
+Gui.SS_Form1.chk1AllECodes.Enabled(True)
+Gui.SS_Form1.chk1AllECodes.FontName("Arial")
+Gui.SS_Form1.chk1AllECodes.FontSize(8)
+Gui.SS_Form1.chk1AllECodes.SetInternationalID(203201)
+Gui.SS_Form1.chk1AllECodes.TabStop(True)
+Gui.SS_Form1.chk1AllECodes.TabIndex(20)
+Gui.SS_Form1.chk1AllECodes.Tooltip("")
+Gui.SS_Form1.chk1AllECodes.ControlGroup(0)
+Gui.SS_Form1.chk1AllECodes.DefaultValue("")
+
+Gui.SS_Form1.chk1AllECodes.Event(click,chk1allecodes_click)
+
+Gui.SS_Form1.chk1_Salary.Create(checkbox)
+Gui.SS_Form1.chk1_Salary.Alignment(0)
+Gui.SS_Form1.chk1_Salary.Caption("Include Salaried Employees")
+Gui.SS_Form1.chk1_Salary.Visible(True)
+Gui.SS_Form1.chk1_Salary.Size(3600,300)
+Gui.SS_Form1.chk1_Salary.Zorder(0)
+Gui.SS_Form1.chk1_Salary.Position(100,6020)
+Gui.SS_Form1.chk1_Salary.Enabled(True)
+Gui.SS_Form1.chk1_Salary.FontName("Arial")
+Gui.SS_Form1.chk1_Salary.FontSize(8)
+Gui.SS_Form1.chk1_Salary.SetInternationalID(542403)
+Gui.SS_Form1.chk1_Salary.TabStop(True)
+Gui.SS_Form1.chk1_Salary.TabIndex(13)
+Gui.SS_Form1.chk1_Salary.Tooltip("")
+Gui.SS_Form1.chk1_Salary.ControlGroup(0)
+Gui.SS_Form1.chk1_Salary.DefaultValue("")
+
+
+Gui.SS_Form1.cmd1_Print.Create(button)
+Gui.SS_Form1.cmd1_Print.Caption("Print")
+Gui.SS_Form1.cmd1_Print.Visible(True)
+Gui.SS_Form1.cmd1_Print.Size(1000,360)
+Gui.SS_Form1.cmd1_Print.Zorder(0)
+Gui.SS_Form1.cmd1_Print.Position(100,6405)
+Gui.SS_Form1.cmd1_Print.Enabled(True)
+Gui.SS_Form1.cmd1_Print.FontName("Arial")
+Gui.SS_Form1.cmd1_Print.FontSize(8)
+Gui.SS_Form1.cmd1_Print.SetInternationalID(452800)
+Gui.SS_Form1.cmd1_Print.TabStop(True)
+Gui.SS_Form1.cmd1_Print.TabIndex(14)
+Gui.SS_Form1.cmd1_Print.Tooltip("")
+Gui.SS_Form1.cmd1_Print.ControlGroup(0)
+Gui.SS_Form1.cmd1_Print.DefaultValue("")
+
+Gui.SS_Form1.cmd1_Print.Event(click,cmd1_print_click)
+
+gui.SS_Form1..minx(0)
+gui.SS_Form1..miny(0)
+gui.SS_Form1.dtp1_BegDate.SetInternationalID(61200)
+gui.SS_Form1.dtp2_EndDate.SetInternationalID(213100)
+gui.SS_Form1.ddl1Beg.SetInternationalID(203205)
+gui.SS_Form1.ddl1End.SetInternationalID(203206)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+'Start ========================================================
+
+
+
+Variable.UDT.uEarnings.Define("sEarnings_Code",String,"Earnings")
+Variable.UDT.uEarnings.Define("sEmployee",String,"Employee")
+Variable.UDT.uEarnings.Define("sDateHistory_Date",String,"Date_History")
+Variable.UDT.uEarnings.Define("lPay_History_Seq",String,"Pay_History_Seq")
+Variable.UDT.uEarnings.Define("sCheck_Code",String,"Check_Code")
+Variable.UDT.uEarnings.Define("fReg_Dollars_1",Float,"Reg_Dollars_1")
+Variable.UDT.uEarnings.Define("fOT_Dollars_1",Float,"OT_Dollars_1")
+Variable.UDT.uEarnings.Define("fDbl_Dollars_1",Float,"Dbl_Dollars_1")
+Variable.UDT.uEarnings.Define("fReg_Hours_1",Float,"Hours_R_1")
+Variable.UDT.uEarnings.Define("fOT_Hours_1",Float,"Hours_O_1")
+Variable.UDT.uEarnings.Define("fDbl_Hours_1",Float,"Hours_D_1")
+Variable.UDT.uEarnings.Define("fReg_Dollars_2",Float,"Reg_Dollars_2")
+Variable.UDT.uEarnings.Define("fOT_Dollars_2",Float,"OT_Dollars_2")
+Variable.UDT.uEarnings.Define("fDbl_Dollars_2",Float,"Dbl_Dollars_2")
+Variable.UDT.uEarnings.Define("fReg_Hours_2",Float,"Hours_R_2")
+Variable.UDT.uEarnings.Define("fOT_Hours_2",Float,"Hours_O_2")
+Variable.UDT.uEarnings.Define("fDbl_Hours_2",Float,"Hours_D_2")
+Variable.UDT.uEarnings.Define("fReg_Dollars_3",Float,"Reg_Dollars_3")
+Variable.UDT.uEarnings.Define("fOT_Dollars_3",Float,"OT_Dollars_3")
+Variable.UDT.uEarnings.Define("fDbl_Dollars_3",Float,"Dbl_Dollars_3")
+Variable.UDT.uEarnings.Define("fReg_Hours_3",Float,"Hours_R_3")
+Variable.UDT.uEarnings.Define("fOT_Hours_3",Float,"Hours_O_3")
+Variable.UDT.uEarnings.Define("fDbl_Hours_3",Float,"Hours_D_3")
+Variable.UDT.uEarnings.Define("lBIRunID",Long)
+Variable.UDT.uEarnings.Define("sDepartment",String,Department)
+Variable.UDT.uEarnings.Define("sName",String,Name)
+Variable.UDT.uEarnings.Define("sPay_Group",String,Pay_Group)
+Variable.UDT.uEarnings.Define("sPay_Type",String,Pay_Type)
+Variable.UDT.uEarnings.Define("fDbl_Dollars",Float,"Dbl_Dollars")
+Variable.UDT.uEarnings.Define("fDbl_Hours",Float,"Dbl_Hours")
+Variable.UDT.uEarnings.Define("fOt_Dollars",Float,"Ot_Dollars")
+Variable.UDT.uEarnings.Define("fOt_Hours",Float,"Ot_Hours")
+Variable.UDT.uEarnings.Define("fReg_Dollars",Float,"Reg_Dollars")
+Variable.UDT.uEarnings.Define("fReg_Hours",Float,"Reg_Hours")
+Variable.UDT.uEarnings.Define("fTot_Dollars",Float,"Tot_Dollars")
+Variable.UDT.uEarnings.Define("fTot_Hours",Float,"Tot_Hours")
+Variable.uGlobal.uEarnings.Declare("uEarnings")
+
+'Global variables =============================================
+Variable.Global.iKey.Declare(Long,0)
+variable.global.sDate1.Declare(String)
+variable.global.sDate2.Declare(String)
+
+Variable.Global.lBIRunID.declare(Long,0)
+Variable.Global.lLogid.declare(Long,0)
+
+'End ==========================================================
+
+Variable.Global.lMultiEmpl.Declare(Long,0)
+Variable.Global.sECSelection.Declare(String)
+Variable.Global.sEmplSelection.Declare(String)
+Variable.Global.bOpt.Declare(Boolean,False)
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+'Start ========================================================
+'Coded by: Jackie Theriot
+'ReCoded by Rking
+V.Local.i1.Declare(Long)
+V.Local.sItem.Declare(String)
+'open connection
+F.ODBC.connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.puser,V.Ambient.PPass)
+gui.SS_Form1..applytranslation
+Gui.SS_Form1.lvw1_Empl.ClearItems
+
+F.Intrinsic.Control.CallSub(Populate_earncodes)
+Gui.SS_Form1..show
+'End ==========================================================
+
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: BIR_PY_EARNINGS.GAS",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Main.End
+
+program.sub.Populate_EarnCodes.Start
+F.Intrinsic.Control.SetErrorHandler("Populate_EarnCodes_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.i1.Declare(Long)
+V.Local.sItem.Declare(String)
+
+'Gui.SS_Form1.ddl1Beg.ClearItems
+'Gui.SS_Form1.ddl1End.ClearItems
+
+'Populating drop down list with earnings code.
+F.Intrinsic.Control.For(V.Local.i1,1,10,1)
+	F.Intrinsic.String.LPad(V.Local.i1,"0",2,V.local.sItem)
+	Gui.SS_Form1.ddl1Beg.AddItem(V.Local.sItem)
+F.Intrinsic.Control.Next(V.Local.i1)
+
+F.Intrinsic.Control.For(V.Local.i1,1,10,1)
+	F.Intrinsic.String.LPad(V.Local.i1,"0",2,V.local.sItem)
+	Gui.SS_Form1.ddl1End.AddItem(V.Local.sItem)
+F.Intrinsic.Control.Next(V.Local.i1)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Populate_EarnCodes_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: BIR_PY_EARNINGS.GAS",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.Populate_EarnCodes.End
+
+program.sub.chk1allecodes_click.start
+F.Intrinsic.Control.SetErrorHandler("chk1allecodes_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'Check all earnings codes click event
+F.Intrinsic.Control.If(V.Screen.Ss_form1!chk1AllECodes.Value,=,1)
+	Gui.Ss_form1.ddl1Beg.Text("")
+	Gui.Ss_form1.ddl1End.Text("")
+	Gui.Ss_form1.ddl1Beg.Enabled(False)
+	Gui.Ss_form1.ddl1End.Enabled(False)
+F.Intrinsic.Control.Else
+	Gui.Ss_form1.ddl1Beg.Enabled(True)
+	Gui.Ss_form1.ddl1End.Enabled(True)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("chk1allecodes_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: BIR_PY_EARNINGS.GAS",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.chk1allecodes_click.end
+
+program.sub.cmd_txt1_BegEmpl_click.start
+'Start ========================================================
+'Beginning Employee Browser
+V.Local.sError.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.sTitles.Declare(String)
+V.Local.sWidths.Declare(String)
+V.Local.sRet.Declare(String)
+
+F.Intrinsic.Control.SetErrorHandler("cmd_txt1_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+
+F.Intrinsic.UI.Browser(50,"",V.Local.sRet)
+
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	Gui.SS_Form1.txt1_BegEmpl.Text(V.Local.sRet.Trim)
+	Gui.SS_Form1.txt2_EndEmpl.Text(V.Screen.SS_Form1!txt1_BegEmpl.Text)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_txt1_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+'End ==========================================================
+
+program.sub.cmd_txt1_BegEmpl_click.end
+
+program.sub.cmd_txt2_EndEmpl_click.start
+'Start ========================================================
+'Ending Employee Browser
+V.Local.sError.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.sTitles.Declare(String)
+V.Local.sWidths.Declare(String)
+V.Local.sRet.Declare(String)
+
+F.Intrinsic.Control.SetErrorHandler("cmd_txt2_EndEmpl_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+
+F.Intrinsic.UI.Browser(50,"",V.Local.sRet)
+
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	Gui.SS_Form1.txt2_EndEmpl.Text(V.Local.sRet.Trim)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_txt2_EndEmpl_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+'End ==========================================================
+
+program.sub.cmd_txt2_EndEmpl_click.end
+
+program.sub.cmd_lvw1add_click.start
+'Start ========================================================
+'Employee Listview Add button
+V.Local.sError.Declare(String)
+
+
+F.Intrinsic.Control.SetErrorHandler("cmd_lvw1add_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+F.Intrinsic.control.If(V.screen.SS_Form1!txt1_BegEmpl.text,<," ","AND",V.screen.SS_Form1!txt2_endEmpl.text,<," ")
+	F.intrinsic.control.exitsub
+Function.Intrinsic.Control.EndIf
+
+F.Intrinsic.Math.Add(V.global.iKey,1,V.global.iKey)
+Gui.SS_Form1.lvw1_Empl.AddListItem(V.global.iKey,V.Screen.SS_Form1!txt1_BegEmpl.Text)
+Gui.SS_Form1.lvw1_Empl.SetListItemSubItemText(V.global.iKey,1,V.Screen.SS_Form1!txt2_EndEmpl.Text)
+Gui.SS_Form1.txt1_BegEmpl.Text("")
+Gui.SS_Form1.txt2_EndEmpl.Text("")
+	
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_lvw1add_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+'End ==========================================================
+
+program.sub.cmd_lvw1add_click.end
+
+program.sub.cmd_lvw1delete_click.start
+'Start ========================================================
+'Employee listview delete button
+V.Local.sError.Declare(String)
+V.Local.iKey.Declare(Long)
+V.Local.iOrd.Declare(Long)
+
+F.Intrinsic.Control.SetErrorHandler("cmd_lvw1delete_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.iKey.Set(V.Screen.SS_Form1!lvw1_Empl.SelectedItemKey)
+Gui.SS_Form1.lvw1_Empl.removeitem(V.Local.iKey)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_lvw1Delete_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+'End ==========================================================
+
+program.sub.cmd_lvw1delete_click.end
+
+program.sub.cmd_lvw1clear_click.start
+'Start ========================================================
+'Employee listview clear button
+V.Local.sError.Declare(String)
+
+F.Intrinsic.Control.SetErrorHandler("cmd_lvw1Clear_Err")
+F.Intrinsic.Control.ClearErrors
+
+Gui.SS_Form1.lvw1_Empl.ClearItems
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_lvw1Clear_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+'End ==========================================================
+
+program.sub.cmd_lvw1clear_click.end
+
+program.sub.cmd1_Print_click.start
+'Start ========================================================
+F.Intrinsic.Control.SetErrorHandler("Cmd1_print_click_Err")
+F.Intrinsic.Control.ClearErrors
+'Print Button
+V.Local.sError.Declare(String)
+V.Local.iC.Declare(Long)
+V.Local.sRows.Declare(String)
+V.Local.iOrd.Declare(Long)
+V.Local.sRange.Declare(String)
+V.Local.sEquery.Declare(String)
+V.Local.sType.Declare(String)
+V.local.sRet.declare(String)
+V.local.bNosec.declare(Boolean)
+V.Local.iPay.Declare(Long)
+V.Local.iT.Declare(Long)
+V.Local.sEmpTable.Declare(String)
+V.Local.sDeptField.Declare(String)
+V.Local.sPayTypeField.Declare(String)
+V.Local.sSalaryType.Declare(String)
+V.Local.sEarnings_Code.Declare(String)
+
+Gui.SS_Form1..Visible(False)
+
+F.Global.BI.GetRunID(V.Global.lBIRunID)
+F.Intrinsic.Control.If(V.Ambient.IsInIDE,=,True)
+        F.Global.BI.StartLogging(V.global.lBIRunID,3306,0,"",V.global.lLogID)
+F.Intrinsic.Control.Else
+        F.Global.BI.StartLogging(V.global.lBIRunID,-1,-1,"",V.global.lLogID)
+F.Intrinsic.Control.EndIf
+
+'edited by RKing so check box is used and not drop down menu, now the selection is only hourly or All
+F.Intrinsic.Control.If(V.Screen.SS_Form1!chk1_Salary.Value,=,1)
+    	V.Local.sType.Set("A")
+	V.Local.sSalaryType.Set("All")
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Screen.SS_Form1!chk1_Salary.Value,=,0)
+    	V.Local.sType.Set("H")
+	V.Local.sSalaryType.Set("Hourly")
+F.Intrinsic.Control.EndIf
+
+f.intrinsic.string.format(V.screen.SS_Form1!dtp1_BegDate.value.pervasivedate,"YYYY-MM-DD",V.global.sDate1)
+f.intrinsic.string.format(V.screen.SS_Form1!dtp2_EndDate.value.pervasivedate,"YYYY-MM-DD",V.global.sDate2)
+F.Intrinsic.String.Split("V_Employee_MSTR*!*V_PYRL_EMP_Hist","*!*",V.Local.sEmpTable)
+F.Intrinsic.String.Split("Dept_Employee*!*Department","*!*",V.Local.sDeptField)
+F.Intrinsic.String.Split("Pay_Type*!*Type","*!*",V.Local.sPayTypeField)
+
+F.Global.General.ReadOption("400318",0,False,V.global.bOpt)
+
+'Get paygroups user has access to
+V.Local.bnosec.Set(False)
+F.Intrinsic.Control.If(V.global.bOpt,=,True)
+	f.Global.Security.getpaygroupsfromuserid(V.Caller.CompanyCode,V.Caller.User,V.Local.sRet)
+	F.Intrinsic.Control.If(V.Local.sRet,<>,"***NORETURN***")
+		V.Local.bnosec.Set(True)
+		F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	F.Intrinsic.Control.endif
+F.Intrinsic.Control.endif
+
+V.uGlobal.uEarnings.Redim(-1,-1)
+'============================================================
+' build recordset from pay_hist_earn for all employees in date range and
+' earnings code range
+'============================================================
+
+'Getting earning code selection
+F.Intrinsic.Control.If(V.Screen.SS_Form1!chk1AllECodes.Value,<>,1)
+	F.Intrinsic.String.Build(" And (Earnings Between '{0}' and '{1}') ",V.Screen.SS_Form1!ddl1Beg.Text,V.Screen.SS_Form1!ddl1End.Text,V.Local.sEarnings_Code)
+F.Intrinsic.Control.EndIf
+'F.Intrinsic.Debug.InvokeDebugger
+'F.Intrinsic.Debug.Stop
+
+F.Intrinsic.Control.For(V.Local.iT,0,1,1)
+	F.Intrinsic.Control.If(V.Screen.SS_Form1!chk2_AllEmpl.value,=,1)
+		'if all employees are checked, we either have to go with security(only selecting the users pay group they authorized to see, or all pay groups(bNoSecSecurity is False)
+		F.Intrinsic.Control.If(V.Local.bnosec,=,False)
+	'		'mod by trt where we are inner joining the employee master information from current file into this query,
+			F.Intrinsic.String.Build("Select V_Pay_Hist_Earn.Employee,{0} As Department,{1} As Pay_Type,Pay_Group,Name,Check_Code, earnings, date_history, pay_history_seq,reg_dollars_1, ot_dollars_1, dbl_dollars_1, hours_r_1, hours_o_1, hours_d_1,reg_dollars_2, ot_dollars_2, dbl_dollars_2, hours_r_2, hours_o_2, hours_d_2,reg_dollars_3, ot_dollars_3, dbl_dollars_3, hours_r_3, hours_o_3, hours_d_3, ",V.Local.sDeptField(v.Local.iT),V.Local.sPayTypeField(v.Local.iT),V.Local.sEquery)
+			F.Intrinsic.String.Build("{0} (dbl_dollars_1+dbl_dollars_2+dbl_dollars_3) as dbl_dollars,(hours_d_1+hours_d_2+hours_d_3) as dbl_hours,(ot_dollars_1+ot_dollars_2+ot_dollars_3) as ot_dollars,(hours_o_1+hours_o_2+hours_o_3) as ot_hours,  (reg_dollars_1+reg_dollars_2+reg_dollars_3) as reg_dollars,(hours_r_1+hours_r_2+hours_r_3) as reg_hours,(dbl_dollars_1+dbl_dollars_2+dbl_dollars_3+ot_dollars_1+ot_dollars_2+ot_dollars_3+reg_dollars_1+reg_dollars_2+reg_dollars_3) as tot_dollars, (hours_d_1+hours_d_2+hours_d_3+hours_o_1+hours_o_2+hours_o_3+hours_r_1+hours_r_2+hours_r_3) as tot_hours from v_pay_hist_earn, {1} Where V_Pay_Hist_Earn.Employee = {1}.Employee",V.Local.sEquery,V.Local.sEmpTable(v.Local.iT),V.Local.sEquery)
+			F.Intrinsic.Control.If(V.Local.iT,=,0)
+				F.Intrinsic.String.Build("{0} And ('{1}' = '1' Or  Date_History Between '{2}' And '{3}')",V.Local.sequery,V.Screen.SS_Form1!chk1_AllDates.Value,V.Global.sDate1,V.Global.sDate2,V.Local.sequery)
+			F.Intrinsic.Control.Else
+				'got to only select those that are not in the employee master active, as we don't want them. because if they are the same ids we only want curernt employees payroll info.
+				F.Intrinsic.String.Build("{0} And ('{1}' = '1' Or  Date_History Between '{2}' And '{3}') And V_Pyrl_Emp_Hist.Employee Not In (Select Employee From V_Employee_MSTR)  ",V.Local.sequery,V.Screen.SS_Form1!chk1_AllDates.Value,V.Global.sDate1,V.Global.sDate2,V.Local.sequery)
+		F.Intrinsic.Control.EndIf
+			F.Intrinsic.String.Build("{0} And ('{1}' = 'All' Or {2} = '{3}') And Earnings <> 'DD' {4} Order By Employee,Date_History",V.Local.sEquery,V.Local.sSalaryType,V.Local.sPayTypeField(v.Local.iT),V.Local.sType,V.Local.sEarnings_Code,V.Local.sEquery)
+			' save selected employee records in record set
+			F.ODBC.Connection!conx.OpenRecordsetRW("rstEarnings",V.Local.sequery)
+			F.Intrinsic.Control.If(V.ODBC.conx!rstEarnings.EOF,<>,True)
+				' save record set in udt
+				F.Intrinsic.Variable.LoadUDTFromRecordset("conx","rstEarnings","v.uGlobal.uEarnings",True,500)
+			F.Intrinsic.Control.EndIf
+			F.odbc.conx!rstEarnings.close
+
+		F.Intrinsic.Control.Else
+			F.Intrinsic.Control.For(V.Local.iPay,0,V.local.sRet.UBound,1)
+				'mod by trt where we are inner joining the employee master information from current file into this query,
+				F.Intrinsic.String.Build("Select V_Pay_Hist_Earn.Employee,{0} As Department,{1} As Pay_Type,Pay_Group,Name,Check_Code, earnings, date_history, pay_history_seq,reg_dollars_1, ot_dollars_1, dbl_dollars_1, hours_r_1, hours_o_1, hours_d_1,reg_dollars_2, ot_dollars_2, dbl_dollars_2, hours_r_2, hours_o_2, hours_d_2,reg_dollars_3, ot_dollars_3, dbl_dollars_3, hours_r_3, hours_o_3, hours_d_3, ",V.Local.sDeptField(v.Local.iT),V.Local.sPayTypeField(v.Local.iT),V.Local.sEquery)
+				F.Intrinsic.String.Build("{0} (dbl_dollars_1+dbl_dollars_2+dbl_dollars_3) as dbl_dollars,(hours_d_1+hours_d_2+hours_d_3) as dbl_hours,(ot_dollars_1+ot_dollars_2+ot_dollars_3) as ot_dollars,(hours_o_1+hours_o_2+hours_o_3) as ot_hours,  (reg_dollars_1+reg_dollars_2+reg_dollars_3) as reg_dollars,(hours_r_1+hours_r_2+hours_r_3) as reg_hours,(dbl_dollars_1+dbl_dollars_2+dbl_dollars_3+ot_dollars_1+ot_dollars_2+ot_dollars_3+reg_dollars_1+reg_dollars_2+reg_dollars_3) as tot_dollars, (hours_d_1+hours_d_2+hours_d_3+hours_o_1+hours_o_2+hours_o_3+hours_r_1+hours_r_2+hours_r_3) as tot_hours from v_pay_hist_earn, {1} Where V_Pay_Hist_Earn.Employee = {1}.Employee",V.Local.sEquery,V.Local.sEmpTable(v.Local.iT),V.Local.sEquery)
+				F.Intrinsic.Control.If(V.Local.iT,=,0)
+					F.Intrinsic.String.Build("{0} And ('{1}' = '1' Or  Date_History Between '{2}' And '{3}')",V.Local.sequery,V.Screen.SS_Form1!chk1_AllDates.Value,V.Global.sDate1,V.Global.sDate2,V.Local.sequery)
+				F.Intrinsic.Control.Else
+					F.Intrinsic.String.Build("{0} And ('{1}' = '1' Or  Date_History Between '{2}' And '{3}') And V_Pyrl_Emp_Hist.Employee Not In(Select Employee From V_Employee_MSTR) ",V.Local.sequery,V.Screen.SS_Form1!chk1_AllDates.Value,V.Global.sDate1,V.Global.sDate2,V.Local.sequery)
+				F.Intrinsic.Control.EndIf
+
+				F.Intrinsic.String.Build("{0} And ('{1}' = 'All' Or {2} = '{3}') And (Pay_Group = '{4}')  And Earnings <> 'DD' {5} Order By Employee,Date_History",V.Local.sEquery,V.Local.sSalaryType,V.Local.sPayTypeField(v.Local.iT),V.Local.sType,V.Local.sRet(v.Local.iPay),V.Local.sEarnings_Code,V.Local.sEquery)
+
+				' save selected employee records in record set
+				F.ODBC.Connection!conx.OpenRecordsetRW("rstEarnings",V.Local.sequery)
+				
+				F.Intrinsic.Control.If(V.ODBC.conx!rstEarnings.EOF,<>,True)
+					' save record set in udt
+					F.Intrinsic.Variable.LoadUDTFromRecordset("conx","rstEarnings","v.uGlobal.uEarnings",True,500)
+				F.Intrinsic.Control.EndIf
+				F.odbc.conx!rstEarnings.close
+
+			F.Intrinsic.Control.Next(V.Local.iPay)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Else
+		' Spin through listview of employees
+		Gui.SS_Form1.lvw1_empl.RetrieveAllListItems(V.Local.srows)
+		F.Intrinsic.Control.If(V.local.srows,<>,"***NORETURN***")
+			F.Intrinsic.String.Split(V.Local.srows,"*!*",V.Local.srows)
+		F.Intrinsic.Control.If(V.Local.bnosec,=,False)
+			'============================================================
+			' build recordsets from pay hist earn employee ranges
+			'============================================================
+			F.Intrinsic.Control.For(V.Local.ic,0,V.Local.srows.UBound,1)
+				Gui.SS_Form1.lvw1_empl.RetrieveItemOrdinal(V.local.srows(v.local.ic),V.local.iord)
+				V.Local.srange.Set(V.Screen.SS_Form1!lvw1_empl.ListItemTextExtended(v.Local.iord))
+				F.Intrinsic.String.Split(V.Local.srange,"*!*",V.Local.srange)
+
+				'have to add in range for the employee number.
+				F.Intrinsic.String.Build("Select V_Pay_Hist_Earn.Employee,{0} As Department,{1} As Pay_Type,Pay_Group,Name,Check_Code, earnings, date_history, pay_history_seq,reg_dollars_1, ot_dollars_1, dbl_dollars_1, hours_r_1, hours_o_1, hours_d_1,reg_dollars_2, ot_dollars_2, dbl_dollars_2, hours_r_2, hours_o_2, hours_d_2,reg_dollars_3, ot_dollars_3, dbl_dollars_3, hours_r_3, hours_o_3, hours_d_3, ",V.Local.sDeptField(v.Local.iT),V.Local.sPayTypeField(v.Local.iT),V.Local.sEquery)
+				F.Intrinsic.String.Build("{0} (dbl_dollars_1+dbl_dollars_2+dbl_dollars_3) as dbl_dollars,(hours_d_1+hours_d_2+hours_d_3) as dbl_hours,(ot_dollars_1+ot_dollars_2+ot_dollars_3) as ot_dollars,(hours_o_1+hours_o_2+hours_o_3) as ot_hours,  (reg_dollars_1+reg_dollars_2+reg_dollars_3) as reg_dollars,(hours_r_1+hours_r_2+hours_r_3) as reg_hours,(dbl_dollars_1+dbl_dollars_2+dbl_dollars_3+ot_dollars_1+ot_dollars_2+ot_dollars_3+reg_dollars_1+reg_dollars_2+reg_dollars_3) as tot_dollars, (hours_d_1+hours_d_2+hours_d_3+hours_o_1+hours_o_2+hours_o_3+hours_r_1+hours_r_2+hours_r_3) as tot_hours from v_pay_hist_earn, {1} Where V_Pay_Hist_Earn.Employee = {1}.Employee",V.Local.sEquery,V.Local.sEmpTable(v.Local.iT),V.Local.sEquery)
+				F.Intrinsic.Control.If(V.Local.iT,=,0)
+					F.Intrinsic.String.Build("{0} And (Employee Between '{4}' And '{5}') And ('{1}' = '1' Or  Date_History Between '{2}' And '{3}')",V.Local.sequery,V.Screen.SS_Form1!chk1_AllDates.Value,V.Global.sDate1,V.Global.sDate2,V.Local.sRange(0),V.Local.srange(1),V.Local.sequery)
+				F.Intrinsic.Control.Else
+					F.Intrinsic.String.Build("{0} And (V_Pay_Hist_Earn.Employee Between '{4}' And '{5}') And ('{1}' = '1' Or  Date_History Between '{2}' And '{3}') And V_Pyrl_Emp_Hist.Employee Not In (Select Employee From V_Employee_MSTR) ",V.Local.sequery,V.Screen.SS_Form1!chk1_AllDates.Value,V.Global.sDate1,V.Global.sDate2,V.Local.sRange(0),V.Local.srange(1),V.Local.sequery)
+				F.Intrinsic.Control.EndIf
+				F.Intrinsic.String.Build("{0} And ('{1}' = 'All' Or {2} = '{3}') And Earnings <> 'DD' {4} Order By Employee,Date_History",V.Local.sEquery,V.Local.sSalaryType,V.Local.sPayTypeField(v.Local.iT),V.Local.sType,V.Local.sEarnings_Code,V.Local.sEquery)
+				
+				' save selected employee records in record set
+				F.ODBC.Connection!conx.OpenRecordsetRW("rstEarnings",V.Local.sequery)
+			
+				F.Intrinsic.Control.If(V.ODBC.conx!rstEarnings.EOF,<>,True)
+					' save record set in udt
+					F.Intrinsic.Variable.LoadUDTFromRecordset("conx","rstEarnings","v.uGlobal.uEarnings",True,500)
+				F.Intrinsic.Control.EndIf
+				F.odbc.conx!rstEarnings.close
+
+			F.Intrinsic.Control.Next(V.Local.ic)
+		F.Intrinsic.Control.Else
+			' Spin through listview of employees	
+			'security is enabled so we only want to loop through their paygroups that they may be a member of then go against the employee arnge?
+			F.Intrinsic.Control.For(V.Local.iPay,0,V.Local.sRet.UBound,1)
+					'============================================================
+					' build recordsets from pay hist earn employee ranges
+					'============================================================
+					F.Intrinsic.Control.For(V.Local.ic,0,V.Local.srows.UBound,1)
+						Gui.SS_Form1.lvw1_empl.RetrieveItemOrdinal(V.local.srows(v.local.ic),V.local.iord)
+						V.Local.srange.Set(V.Screen.SS_Form1!lvw1_empl.ListItemTextExtended(v.Local.iord))
+						F.Intrinsic.String.Split(V.Local.srange,"*!*",V.Local.srange)
+						'mod by trt where we are inner joining the employee master information from current file into this query,also what has been added to this query is the particular pay types.
+						F.Intrinsic.String.Build("Select V_Pay_Hist_Earn.Employee,{0} As Department,{1} As Pay_Type,Pay_Group,Name,Check_Code, earnings, date_history, pay_history_seq,reg_dollars_1, ot_dollars_1, dbl_dollars_1, hours_r_1, hours_o_1, hours_d_1,reg_dollars_2, ot_dollars_2, dbl_dollars_2, hours_r_2, hours_o_2, hours_d_2,reg_dollars_3, ot_dollars_3, dbl_dollars_3, hours_r_3, hours_o_3, hours_d_3, ",V.Local.sDeptField(v.Local.iT),V.Local.sPayTypeField(v.Local.iT),V.Local.sEquery)
+						F.Intrinsic.String.Build("{0} (dbl_dollars_1+dbl_dollars_2+dbl_dollars_3) as dbl_dollars,(hours_d_1+hours_d_2+hours_d_3) as dbl_hours,(ot_dollars_1+ot_dollars_2+ot_dollars_3) as ot_dollars,(hours_o_1+hours_o_2+hours_o_3) as ot_hours,  (reg_dollars_1+reg_dollars_2+reg_dollars_3) as reg_dollars,(hours_r_1+hours_r_2+hours_r_3) as reg_hours,(dbl_dollars_1+dbl_dollars_2+dbl_dollars_3+ot_dollars_1+ot_dollars_2+ot_dollars_3+reg_dollars_1+reg_dollars_2+reg_dollars_3) as tot_dollars, (hours_d_1+hours_d_2+hours_d_3+hours_o_1+hours_o_2+hours_o_3+hours_r_1+hours_r_2+hours_r_3) as tot_hours from v_pay_hist_earn, {1} Where V_Pay_Hist_Earn.Employee = {1}.Employee",V.Local.sEquery,V.Local.sEmpTable(v.Local.iT),V.Local.sEquery)
+						F.Intrinsic.Control.If(V.Local.iT,=,0)
+							F.Intrinsic.String.Build("{0} And (V_Pay_Hist_Earn.Employee Between '{4}' And '{5}') And ('{1}' = '1' Or  Date_History Between '{2}' And '{3}')",V.Local.sequery,V.Screen.SS_Form1!chk1_AllDates.Value,V.Global.sDate1,V.Global.sDate2,V.Local.sRange(0),V.Local.srange(1),V.Local.sequery)
+						F.Intrinsic.Control.Else
+							F.Intrinsic.String.Build("{0} And (V_Pay_Hist_Earn.Employee Between '{4}' And '{5}') And ('{1}' = '1' Or  Date_History Between '{2}' And '{3}') And V_Pyrl_Emp_Hist.Employee Not In (Select Employee From V_Employee_MSTR) ",V.Local.sequery,V.Screen.SS_Form1!chk1_AllDates.Value,V.Global.sDate1,V.Global.sDate2,V.Local.sRange(0),V.Local.srange(1),V.Local.sequery)
+						F.Intrinsic.Control.EndIf
+
+						F.Intrinsic.String.Build("{0} And ('{1}' = 'All' Or {2} = '{3}') And (Pay_Group = '{4}')  And Earnings <> 'DD' {5} Order By Employee,Date_History",V.Local.sEquery,V.Local.sSalaryType,V.Local.sPayTypeField(v.Local.iT),V.Local.sType,V.Local.sRet(v.Local.iPay),V.Local.sEarnings_Code,V.Local.sEquery)
+
+						' save selected employee records in record set
+						F.ODBC.Connection!conx.OpenRecordsetRW("rstEarnings",V.Local.sequery)
+				
+						F.Intrinsic.Control.If(V.ODBC.conx!rstEarnings.EOF,<>,True)
+							' save record set in udt
+							F.Intrinsic.Variable.LoadUDTFromRecordset("conx","rstEarnings","v.uGlobal.uEarnings",True,500)
+						F.Intrinsic.Control.EndIf
+						F.odbc.conx!rstEarnings.close
+
+					F.Intrinsic.Control.Next(V.Local.ic)
+				F.Intrinsic.Control.Next(V.Local.iPay)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.endif
+	F.Intrinsic.Control.endif
+F.Intrinsic.Control.Next(V.Local.iT)
+
+F.Intrinsic.Control.If(V.uGlobal.uearnings.Ubound,<>,-1)
+	' Set run id value in uearnings udt
+	F.Intrinsic.Variable.udtsetmembervalue(V.uGlobal.uEarnings!lBIRunID,V.global.lBIRunID)
+	'Define fields that were populated above
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uEarnings!lBIRunID,"BIRunID")
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uEarnings!sDepartment,"Department")
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uEarnings!sPay_Type,"Pay_Type")
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uEarnings!sPay_Group,"Pay_Group")
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uEarnings!sName,"Name")
+	F.Intrinsic.Variable.setudtfielddatemask(V.uGlobal.uEarnings!sDateHistory_date,"YYYY-MM-DD")
+F.Intrinsic.Control.endif
+
+'open Z table
+F.ODBC.Connection!conx.OpenRecordsetRW("rstzEarnings","Z_PY_Earnings")
+'mod by trt, the above command shouldn't even worked in the first place, there isn't a select?
+F.Intrinsic.Control.If(V.uGlobal.uearnings.Ubound,<>,-1)
+        F.Intrinsic.Variable.saveudttorecordset("conx","rstzEarnings","v.uglobal.uEarnings")
+F.Intrinsic.Control.endif
+F.ODBC.conx!rstzEarnings.Close
+	
+F.Global.BI.StopLogging(V.Global.lLogid)
+
+F.Intrinsic.Control.CallSub(Callbi)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd1_Print_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: BIR_PY_EARNINGS.GAS",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmd1_Print_click.end
+
+Program.Sub.CallBI.Start
+'Start ==========================================================
+V.Local.sParams.Declare(String)
+V.Local.sValues.Declare(String)
+V.local.sError.declare(String)
+V.local.iRet.declare(Long)
+V.Local.sDateSelection.Declare(String)
+
+F.Intrinsic.Control.SetErrorHandler("CallBI_Err")
+F.Intrinsic.Control.ClearErrors
+
+F.Intrinsic.Control.If(V.Screen.SS_Form1!chk1_AllDates.Value,<>,1)
+	F.Intrinsic.String.Build("{0} - {1}",V.Global.sDate1,V.Global.sDate2,V.Local.sDateSelection)
+F.Intrinsic.Control.Else
+	V.Local.sDateSelection.Set("0")
+F.Intrinsic.Control.EndIf
+
+V.Local.sParams.set("AllDates*!*AllEmpl*!*MultiEmpl*!*EmplSelection*!*DateSelection*!*SalaryType")
+F.Intrinsic.String.Build("{0}*!*{1}*!*{2}*!*{3}*!*{4}*!*{5}",V.Screen.SS_Form1!chk1_AllDates.Value,V.Screen.SS_Form1!chk2_AllEmpl.Value,V.Global.lMultiEmpl,V.Global.sEmplSelection,V.Local.sDateSelection,V.Screen.SS_Form1!chk1_Salary.Value,V.Local.sValues)
+
+F.Global.BI.RunReportPreProcessor(V.global.lBIRunID,V.global.lLogid,V.Local.sParams,V.Local.sValues,"",-1,True,"",-1,"",-1,"","",V.Local.iRet)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("CallBI_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+'End ==========================================================
+
+Program.Sub.CallBI.End
+
+program.sub.chk2_AllEmpl_click.start
+F.Intrinsic.Control.SetErrorHandler("chk2_AllEmpl_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+'Start ========================================================
+'All Employees
+
+
+F.Intrinsic.Control.If(V.Screen.SS_Form1!chk2_AllEmpl.Value,=,1)
+'disable entry of employee range
+	Gui.SS_Form1.txt1_BegEmpl.Enabled(false)
+	Gui.SS_Form1.txt2_EndEmpl.Enabled(false)
+	Gui.SS_Form1.cmd_txt1_BegEmpl.Enabled(false)
+	Gui.SS_Form1.cmd_txt2_EndEmpl.Enabled(false)
+	Gui.SS_Form1.cmd_lvw1_EmplAdd.Enabled(false)
+	Gui.SS_Form1.cmd_lvw1_EmplClear.Enabled(false)
+	Gui.SS_Form1.cmd_lvw1_EmplDelete.Enabled(false)
+	Gui.SS_Form1.txt1_BegEmpl.Text("")
+	Gui.SS_Form1.txt2_EndEmpl.Text("")
+	Gui.SS_Form1.lvw1_Empl.ClearItems
+
+F.Intrinsic.control.Else
+
+'	enable entry of part range
+	Gui.SS_Form1.txt1_BegEmpl.Enabled(true)
+	Gui.SS_Form1.txt2_EndEmpl.Enabled(true)
+	Gui.SS_Form1.cmd_txt1_BegEmpl.Enabled(true)
+	Gui.SS_Form1.cmd_txt2_EndEmpl.Enabled(true)
+	Gui.SS_Form1.cmd_lvw1_EmplAdd.Enabled(true)
+	Gui.SS_Form1.cmd_lvw1_EmplClear.Enabled(true)
+	Gui.SS_Form1.cmd_lvw1_EmplDelete.Enabled(true)
+	Gui.SS_Form1.lvw1_Empl.ClearItems
+F.Intrinsic.Control.EndIf
+
+'End ==========================================================
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("chk2_AllEmpl_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: BIR_PY_EARNINGS.GAS",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.chk2_AllEmpl_click.end
+
+Program.sub.ss_form1_unload.start
+F.Intrinsic.Control.SetErrorHandler("ss_form1_unload_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+'Start ========================================================
+
+
+F.ODBC.Connection!conx.Close
+F.Intrinsic.Control.End
+
+'End ==========================================================
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("ss_form1_unload_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: BIR_PY_EARNINGS.GAS",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.ss_form1_unload.end
+
+program.sub.chk1_alldates_click.start
+F.Intrinsic.Control.SetErrorHandler("chk1_alldates_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+'Start ========================================================
+'All Dates
+
+F.Intrinsic.Control.If(V.Screen.SS_Form1!chk1_AllDates.Value,=,1)
+'	disable entry of date range
+	Gui.SS_Form1.dtp1_BegDate.enabled(false)
+	Gui.SS_Form1.dtp2_EndDate.Enabled(false)
+	
+F.Intrinsic.control.Else
+'	enable entry of date range
+	Gui.SS_Form1.dtp1_BegDate.Enabled(true)
+	Gui.SS_Form1.dtp2_EndDate.Enabled(true)
+F.Intrinsic.Control.EndIf
+
+'End ==========================================================
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("chk1_alldates_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: BIR_PY_EARNINGS.GAS",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.chk1_alldates_click.end
+
+program.sub.txt1_begempl_gotfocus.start
+F.Intrinsic.Control.SetErrorHandler("txt1_begempl_gotfocus_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+Gui.SS_Form1.txt1_begempl.SelectAll
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("txt1_begempl_gotfocus_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: BIR_PY_EARNINGS.GAS",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.txt1_begempl_gotfocus.end
+
+program.sub.txt1_begempl_lostfocus.start
+F.Intrinsic.Control.SetErrorHandler("txt1_begempl_lostfocus_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+Gui.SS_Form1.txt2_endempl.text(V.Screen.SS_Form1!txt1_begempl.text)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("txt1_begempl_lostfocus_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: BIR_PY_EARNINGS.GAS",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.txt1_begempl_lostfocus.end
+
+program.sub.txt2_endempl_gotfocus.start
+F.Intrinsic.Control.SetErrorHandler("txt2_endempl_gotfocus_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+Gui.SS_Form1.txt2_endempl.SelectAll
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("txt2_endempl_gotfocus_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: BIR_PY_EARNINGS.GAS",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.txt2_endempl_gotfocus.end
+
+Program.Sub.ScreenSS.Start
+SS_Form1{{CAPTION::Earnings History
+SS_Form1.CTRL{{NAME::dtp1_BegDate\\TYPE::6\\CAPTION::Beginning Date\\TABSTOP::1\\GROUP::1\\BROWSER::0\\INTL::61200\\SIZE::1
+SS_Form1.CTRL{{NAME::dtp2_EndDate\\TYPE::6\\CAPTION::Ending Date\\TABSTOP::2\\GROUP::1\\BROWSER::0\\INTL::213100\\SIZE::1
+SS_Form1.CTRL{{NAME::chk1_AllDates\\TYPE::9\\CAPTION::All Dates\\TABSTOP::3\\GROUP::-1\\SUBGROUP::1\\BROWSER::0\\INTL::19700\\SIZE::1
+SS_Form1.CTRL{{NAME::txt1_BegEmpl\\TYPE::2\\CAPTION::Beginning Employee\\RANGE::lvw1_Empl\\TABSTOP::4\\GROUP::2\\BROWSER::1\\INTL::61500\\SIZE::1
+SS_Form1.CTRL{{NAME::txt2_EndEmpl\\TYPE::2\\CAPTION::Ending Employee\\RANGE::lvw1_Empl\\TABSTOP::5\\GROUP::2\\BROWSER::1\\INTL::213400\\SIZE::1
+SS_Form1.CTRL{{NAME::chk2_AllEmpl\\TYPE::9\\CAPTION::All Employees\\TABSTOP::6\\GROUP::-1\\SUBGROUP::1\\BROWSER::0\\INTL::20100\\SIZE::1
+SS_Form1.CTRL{{NAME::lvw1_Empl\\TYPE::7\\TABSTOP::7\\GROUP::-1\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::ddl1Beg\\TYPE::4\\CAPTION::Beginning Earnings Code\\TABSTOP::8\\GROUP::3\\BROWSER::0\\INTL::203205\\SIZE::1
+SS_Form1.CTRL{{NAME::ddl1End\\TYPE::4\\CAPTION::Ending Earnings Code\\TABSTOP::9\\GROUP::3\\BROWSER::0\\INTL::203206\\SIZE::1
+SS_Form1.CTRL{{NAME::chk1AllECodes\\TYPE::9\\CAPTION::All Earnings Code\\GROUP::-1\\SUBGROUP::1\\BROWSER::0\\INTL::203201\\SIZE::1
+SS_Form1.CTRL{{NAME::chk1_Salary\\TYPE::9\\CAPTION::Include Salaried Employees\\TABSTOP::10\\GROUP::-1\\BROWSER::0\\INTL::542403\\SIZE::1
+SS_Form1.CTRL{{NAME::cmd1_Print\\TYPE::5\\CAPTION::Print\\TABSTOP::11\\GROUP::-1\\BROWSER::0\\INTL::452800\\SIZE::1
+
+Program.Sub.ScreenSS.End
+Program.Sub.Comments.Start
+${$0$}$BIR_PY_EARNINGS_SUMM$}$SUPERVSR$}$4/28/2015$}$False
+${$3$}$0$}$$}$-1$}$-1$}$$}$1/1/1900$}$'Project Start Date: 7/05/2011
+'Issue:  4703
+'Spec 22/
+'Notes:
+'  This is the Payroll Earnings Summary Report
+'  Report ids:  3313 - PY_EARNINGS_SUMM_3313.RPT
+'			
+' Options used:  400318 - Use payroll security
+' Special subroutines:  f.Global.Security.getpaygroupsfromuserid(V.Caller.CompanyCode,V.Caller.User,V.Local.sRet)
+'					Used to retrieve a list of pay group user id is allowed to view.
+'  12/3/13  JT  Issue 8117.  Remove loop from udtmultiunflag statements
+'moved formulas for dbl_hours, dbl_dollars, ot_hours, ot_dollars, reg_hours, reg_dollars, tot_hours and tot_dollars from crystal to sql query
+
+'6/3/2015
+'Replaced Drop box that let user choose between All, Hourly, Salary to a check box that Includes Salary, So the option for the user is Hourly or All
+'All formulas that was in Crystal is now handled within GAB
+Program.Sub.Comments.End
